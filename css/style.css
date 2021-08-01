@@ -10,10 +10,27 @@
     --color-green: #49AA26;
     --color-greendown: #12a454;
     --color-bluedown: #699CB3;
+    --color-dark: #3D3C42;
 }
+
+/* LINKS and BUTTONS*/
 
 a {
     text-decoration: none;
+    color: #49aa26;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
 }
 
 * {
@@ -27,6 +44,18 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .container {
     width: min(90vw, 800px);
     margin: auto;
@@ -34,9 +63,15 @@ body {
 
 /* Header  ==================*/
 header {
-    text-align: center;
-    background-color: #000;
-    padding: 2rem 0 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right, black, #555);
+    padding: 2rem 0 8rem;
+}
+
+header img {
+    height: 250px;
 }
 
 #logo {
@@ -52,8 +87,11 @@ h2 {
     font-weight: normal;
 }
 
+#balance {
+    margin-top: -6rem;
+}
+
 #balance h2 {
-    margin-top: -8rem;
     color: var(--color-white);
 }
 
@@ -67,6 +105,9 @@ h2 {
 .cards h3 {
     font-weight: normal;
     font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .cards p {
@@ -91,9 +132,16 @@ h2 {
     color: var(--color-white);
 }
 
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
+    color: #969cb3;
 }
 
 table th {
@@ -128,11 +176,49 @@ td.expenses {
     color: var(--color-red);
 }
 
+/* Modal ===================*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+}
+
 /* Footer  ==================*/
 footer{
     text-align: center;
     padding: 4rem 2rem;
     color: var(--dark-blue);
     opacity: 0.6;
+}
+
+/* Responsividade ===========*/
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
 
