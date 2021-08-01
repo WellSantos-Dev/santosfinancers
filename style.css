@@ -1,0 +1,138 @@
+/* Global  ==================*/
+:root {
+    --dark-blue: #363f5f;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gold: #FFD700;
+    --color-gray: #f0f2f5;
+    --color-blue: #3838c3;
+    --color-red: #e92929;
+    --color-green: #49AA26;
+    --color-greendown: #12a454;
+    --color-bluedown: #699CB3;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* Header  ==================*/
+header {
+    text-align: center;
+    background-color: #000;
+    padding: 2rem 0 10rem;
+}
+
+#logo {
+    font-weight: 100;
+    color: var(--color-gold);
+}
+
+/*   Body  ==================*/
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+
+#balance h2 {
+    margin-top: -8rem;
+    color: var(--color-white);
+}
+
+.cards {
+    background-color: var(--color-white);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+}
+
+.cards h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.cards p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.cards.input h3 {
+    color: var(--color-greendown);
+}
+
+.cards.output h3 {
+    color: var(--color-red);
+}
+
+.cards.total {
+    background-color: var(--color-green);
+}
+
+.cards.total {
+    color: var(--color-white);
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+}
+
+table th {
+    background-color: var(--color-white);
+    color: var(--color-bluedown);
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+table tr:hover {
+    opacity: 1;
+}
+
+table td {
+    background-color: var(--color-white);
+    padding: 1.5rem 2rem;
+}
+
+table td:hover {
+    opacity: 0.7;
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color: var(--color-greendown);
+}
+
+td.expenses {
+    color: var(--color-red);
+}
+
+/* Footer  ==================*/
+footer{
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--dark-blue);
+    opacity: 0.6;
+}
+
