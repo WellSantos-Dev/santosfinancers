@@ -53,7 +53,7 @@
         <section id="transaction">
             <h2 class="sr-only">Transaçoes</h2>
 
-            <a href="#" class="button new">+ Nova transação</a>
+            <a href="#" class="button new" onclick="Modal.abrirModal()">+ Nova transação</a>
 
             <table id="data-table">
                 <thead>
@@ -95,7 +95,7 @@
         </section>
     </main>
 
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal">
             <div id="form">
                 <h2>Nova transação</h2>
@@ -133,7 +133,7 @@
                     </div>
 
                     <div class="input-group actions">
-                        <a href="#" class="button cancel">Cancelar</a>
+                        <a href="#" class="button cancel" onclick="Modal.removerModal()">Cancelar</a>
                         <button>Salvar</button>
                     </div>
                 </form>
@@ -142,8 +142,10 @@
     </div>
 
     <footer>
-        <p>Feito com ❤️ por <a href="https://github.com/WellSantos-Dev">Well Santos</a></p>
+        <p>Desenvolvido com ❤️ por <a href="https://github.com/WellSantos-Dev">Well Santos</a></p>
     </footer>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
